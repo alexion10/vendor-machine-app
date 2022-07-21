@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { counter } from "../Dashboard/Reducer";
+import { counter } from "../menuInteraction/Reducer";
 
 const store = configureStore({
     reducer: {

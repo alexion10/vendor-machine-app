@@ -1,0 +1,45 @@
+.card{
+    width: 300px;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.App{
+ display: flex;
+
+}
+
+.products{
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 30px 30px; 
+    justify-content: center; 
+    align-content: center; 
+    justify-items: center; 
+    align-items: center; 
+}
+
+.interactionMenu{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border:1px solid black;
+    padding: 50px;
+    margin-left: 100px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu button{
+    margin-top: 20px;
+}

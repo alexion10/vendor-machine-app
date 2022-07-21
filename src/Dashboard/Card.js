@@ -1,14 +1,18 @@
-import { useDispatch, useSelector } from "react-redux/es/exports";
-import { Increment } from "./Action";
+import { useDispatch } from "react-redux"
+import { ManageItem, Decrement } from "../menuInteraction/Action"
 
-export function Card () {
+export function Card ({id, name, price, quantity, color}) {
     const dispatch = useDispatch();
-    const counter = useSelector(state => state.counter)
-    console.log(1)
+    const dispatchMultiple = (id, price) => {
+            dispatch(ManageItem(id))
+            dispatch(Decrement(price))
+    }
     return (
         <div className="card">
-            {counter}
-            <button onClick={()=>{dispatch(Increment(1))}}>Apasa!</button>
+            <p style={{background: color}}>{price}</p>
+            <p>{name}</p>
+            <p>{quantity}</p>
+            <button onClick={()=>{dispatchMultiple(id, price)}}>Take product!</button>
         </div>
     )
 }
